@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import FormTemplate from './src/components/App';
+import '../src/style/index.css';
+import FormTemplate from './components/App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FormTemplate />
-    <FormTemplate />
-    <FormTemplate />
-    <FormTemplate />
     <FormTemplate />
   </React.StrictMode>
 );
