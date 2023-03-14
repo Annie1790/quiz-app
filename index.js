@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import FormTemplate from './App';
+import FormTemplate from './src/components/App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
