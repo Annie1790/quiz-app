@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import '../src/style/index.css';
 import FormTemplate from './components/App';
+import Header from './components/Header';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <div id="main-flex">
+    <Header />
     <FormTemplate />
-  </React.StrictMode>
+    </div>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

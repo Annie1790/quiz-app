@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 //Objects
-import questions from './questions';
+import questions from './Questions';
 
 //Style
 import '../style/App.css';
