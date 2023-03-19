@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import '../src/style/index.css';
+import '../src/style/index.scss';
 import FormTemplate from './components/App';
 import Header from './components/Header';
 

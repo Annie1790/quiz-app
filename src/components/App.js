@@ -5,15 +5,17 @@ import { useState } from 'react';
 import questions from './Questions';
 
 //Style
-import '../style/App.css';
+import '../style/App.scss';
+
+
 
 const FormTemplate = () => {
   const [index, setIndex] = useState(0);
+  const [score, setScore] = useState(0);
 
   const getAnswerFromUser = (event) => {
     let userAnswer = event.target.value;
     console.log(userAnswer);
-
   }
 
   const handleSubmit = (event) => {
@@ -29,14 +31,14 @@ const FormTemplate = () => {
     }
   }
 
-  let question = questions[index]
+  let question = questions[index];
 
   let inputFields = question.answers.map((item) => {
     return (
-      <>
-      <input name='answer' type="radio" value={item.answer}></input>
+      <div>
+        <input name='answer' type="radio" value={item.answer}></input>
         <label>{item.answer}</label>
-      </>
+      </div>
     )
   })
 
@@ -45,10 +47,11 @@ const FormTemplate = () => {
 
 
   return (
-    <div>
+    <div id="form">
       <form onSubmit={handleSubmit} onChange={getAnswerFromUser}>
         <div>
-          <h1>{index+1}/{questions.length}</h1><h1>{question.question}</h1>
+          <p>{index + 1}/{questions.length}</p>
+          <h1>{question.question}</h1>
         </div>
 
         {inputFields}

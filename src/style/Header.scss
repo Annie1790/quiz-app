@@ -1,0 +1,23 @@
+@use 'index';
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+
+#header {
+    @include index.flex();
+    align-items: baseline !important;
+    gap: 1rem;
+    
+    * {
+        font-family: 'Sacramento', cursive;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+}
+

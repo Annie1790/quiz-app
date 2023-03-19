@@ -1,0 +1,47 @@
+@mixin mainGrid() {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$bg_color: whitesmoke;
+$first_color: #bd9ea6;
+$polka_color: e5e5f7;
+
+$radius: 2rem;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image: radial-gradient(#bd9ea6 1.9500000000000002px, #e5e5f7 1.9500000000000002px);
+  background-size: 39px 39px;
+  height: 100vh;
+  @include mainGrid();
+}
+
+#root {
+  grid-row: 2;
+  grid-column: 2;
+  @include flex();
+
+  #main-flex {
+    min-height: 600px;
+    min-width: 400px;
+    max-width: 600px;
+    background-color: $bg_color;
+    border-radius: $radius;
+    -webkit-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.72);
+    box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.72);
+  }
+}
