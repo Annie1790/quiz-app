@@ -6,8 +6,12 @@
 //         height: 30px;
 //         font-family: 'Courier New', Courier, monospace;
 
-#form {
+#main-flex {
+    display: flex;
+    flex-direction: column;
+}
 
+#form {
     * {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
@@ -26,7 +30,7 @@
         border: 0;
         border-radius: 100px;
         box-sizing: border-box;
-        color:  index.$bg_color;
+        color: index.$bg_color;
         cursor: pointer;
         display: inline-flex;
         font-size: 16px;
@@ -54,4 +58,53 @@
         background-color: index.$polka_color;
         color: #ffffff;
     }
+}
+
+;
+
+#loading {
+    @include index.flex();
+    height: 300px;
+
+    .loading-spinner {
+        animation: rotate 2s linear infinite;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 -25px;
+        width: 50px;
+        height: 50px;
+
+        & .path {
+            stroke: index.$first_color;
+            stroke-linecap: round;
+            animation: dash 1.5s ease-in-out infinite;
+        }
+
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dasharray: 1, 150;
+            stroke-dashoffset: 0;
+        }
+
+        50% {
+            stroke-dasharray: 90, 150;
+            stroke-dashoffset: -35;
+        }
+
+        100% {
+            stroke-dasharray: 90, 150;
+            stroke-dashoffset: -124;
+        }
+    }
+
 }

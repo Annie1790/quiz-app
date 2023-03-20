@@ -30,20 +30,21 @@ const FormTemplate = () => {
       for (let itemAnswer of item.answers) {
         if (answer === itemAnswer.answer) {
           if (itemAnswer.correct === true) {
-            setScore(score+1)
+            setScore(score + 1)
           }
         }
       }
     }
   }
 
-  const getAnswerFromUser = (event) => {
+  const getAnswerFromUser = event => {
     setAnswer(event.target.value)
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     checkAnswer()
     event.preventDefault()
+    console.log(event.target.value)
   }
 
   const setNewQuestion = () => {
@@ -54,33 +55,54 @@ const FormTemplate = () => {
     }
   }
 
-  let question = questions[index];
+  //changes form button according to the questions array length
+  let ChangeButton = () => {
+    if (index + 1 === questions.length) {
+      return (
+        <button type='submit' onClick={setNewQuestion}>Submit</button>
+      )
+    } else {
+      return (
+        <button type='submit' onClick={setNewQuestion}>Next</button>
+      )
+    }
+  }
 
-  let inputFields = question.answers.map((item) => {
+
+  //main return
+  if (index + 1 > questions.length) {
     return (
-      <div>
-        <input name='answer' type="radio" value={item.answer}></input>
-        <label>{item.answer}</label>
+      <div id='loading'>
+      <svg class="loading-spinner" viewBox="0 0 50 50">
+        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+      </svg>
       </div>
     )
-  })
+  } else {
+    let question = questions[index];
 
-
-//main return
-  return (
-    <div id="form">
-      <form onSubmit={handleSubmit} onChange={getAnswerFromUser}>
+    let inputFields = question.answers.map((item) => {
+      return (
         <div>
-          <p>{index + 1}/{questions.length}</p>
-          <h1>{question.question}</h1>
+          <input name='answer' type="radio" value={item.answer}></input>
+          <label>{item.answer}</label>
         </div>
+      )
+    });
+    return (
+      <div id="form">
+        <form onSubmit={handleSubmit} onChange={getAnswerFromUser}>
+          <div>
+            <p>{index + 1}/{questions.length}</p>
+            <h1>{question.question}</h1>
+          </div>
+          {inputFields}
+          <ChangeButton />
 
-        {inputFields}
-
-        <button type='submit' onClick={setNewQuestion}>Next</button>
-      </form>
-    </div>
-  )
+        </form>
+      </div>
+    )
+  }
 }
 
 export default FormTemplate;
