@@ -7,20 +7,43 @@ import questions from './Questions';
 //Style
 import '../style/App.scss';
 
-
-
 const FormTemplate = () => {
   const [index, setIndex] = useState(0);
+  const [answer, setAnswer] = useState("");
   const [score, setScore] = useState(0);
 
+  //better with for (... of ...)
+  // let checkAnswer = () => {
+  //   questions.forEach((item) => {
+  //     item.answers.forEach((item) => {
+  //       if (answer === item.answer) {
+  //         if (item.correct === true) {
+  //           setScore( score + 1)
+  //         }
+  //       }
+  //     })
+  //   })
+  // }
+
+  let checkAnswer = () => {
+    for (let item of questions) {
+      for (let itemAnswer of item.answers) {
+        if (answer === itemAnswer.answer) {
+          if (itemAnswer.correct === true) {
+            setScore(score+1)
+          }
+        }
+      }
+    }
+  }
+
   const getAnswerFromUser = (event) => {
-    let userAnswer = event.target.value;
-    console.log(userAnswer);
+    setAnswer(event.target.value)
   }
 
   const handleSubmit = (event) => {
+    checkAnswer()
     event.preventDefault()
-    console.log("submitted")
   }
 
   const setNewQuestion = () => {
@@ -43,9 +66,7 @@ const FormTemplate = () => {
   })
 
 
-
-
-
+//main return
   return (
     <div id="form">
       <form onSubmit={handleSubmit} onChange={getAnswerFromUser}>
