@@ -1,5 +1,9 @@
 //Hooks
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+//Components
+import LoadingScreen from './Loading_screen';
+import Result from './Result';
 
 //Objects
 import questions from './Questions';
@@ -11,6 +15,8 @@ const FormTemplate = () => {
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState("");
   const [score, setScore] = useState(0);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [result, setResult] = useState(false);
 
   //better with for (... of ...)
   // let checkAnswer = () => {
@@ -44,44 +50,45 @@ const FormTemplate = () => {
   const handleSubmit = event => {
     checkAnswer()
     event.preventDefault()
-    console.log(event.target.value)
   }
 
   const setNewQuestion = () => {
-    if (index >= questions.length) {
-      setIndex(0)
-    } else {
-      setIndex(index + 1)
+    setIndex(index + 1)
+    if (index + 1 === questions.length) {
+      setIsSubmitted(true);
     }
   }
 
-  //changes form button according to the questions array length
-  let ChangeButton = () => {
-    if (index + 1 === questions.length) {
-      return (
-        <button type='submit' onClick={setNewQuestion}>Submit</button>
-      )
-    } else {
-      return (
-        <button type='submit' onClick={setNewQuestion}>Next</button>
-      )
+  useEffect(() => {
+    if (isSubmitted === true) {
+      const time = setTimeout(() => {
+        setResult(true);
+        setIsSubmitted(false);
+      }, 3000);
+      return () => clearTimeout(time);
     }
-  }
+
+  }, [isSubmitted]);
+
+
 
 
   //main return
-  if (index + 1 > questions.length) {
-    return (
-      <div id='loading'>
-      <svg class="loading-spinner" viewBox="0 0 50 50">
-        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
-      </svg>
-      </div>
-    )
-  } else {
-    let question = questions[index];
+  if (isSubmitted === true && result === false) {
 
-    let inputFields = question.answers.map((item) => {
+    return (
+      <LoadingScreen />
+    )
+
+  } else if (result === true) {
+    return (
+      <Result  score={score} index={index}/>
+    )
+  }
+  else {
+
+
+    let inputFields = questions[index].answers.map((item) => {
       return (
         <div>
           <input name='answer' type="radio" value={item.answer}></input>
@@ -94,10 +101,10 @@ const FormTemplate = () => {
         <form onSubmit={handleSubmit} onChange={getAnswerFromUser}>
           <div>
             <p>{index + 1}/{questions.length}</p>
-            <h1>{question.question}</h1>
+            <h1>{questions[index].question}</h1>
           </div>
           {inputFields}
-          <ChangeButton />
+          <button type='submit' onClick={setNewQuestion}>{index + 1 === questions.length ? "Submit" : "Next"}</button>
 
         </form>
       </div>
