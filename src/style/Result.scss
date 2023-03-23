@@ -1,15 +1,37 @@
+@use 'index';
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
-div {
-
+#resultDiv {
+    @include index.flex;
+    flex-direction: column;
+    gap: 30px;
     p {
         font-family: "sacramento", cursive;
         font-size: 36px;
         margin: 0px;
     }
 
+    h1 {
+        font-family: "sacramento", cursive;
+        color: grayscale($color: #000000);
+    }
+
     img {
         width: 48px;
         height: 48px;
+    }
+
+    div {
+        @include index.flex();
+        gap: 30px;
+        button {
+            @include index.button();
+            max-width: 120px !important;
+         }
+     
+         button:hover,
+         button:focus {
+             @include index.buttonHover();
+         }
     }
 }

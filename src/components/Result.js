@@ -4,26 +4,31 @@ import "../style/Result.scss"
 
 const Result = ({ score, index }) => {
 
-    let CountScorePercentage = (score, index) => {
-        let result = 0;
+    let result = 0;
+    result = (score / index) * 100;
+    result = Math.floor(result).toString();
 
-        result = (score/index) * 100;
-        result = result.toString();
+    let CountScorePercentage = () => {
         return (
-            <h1>{result}</h1>
+            <h1>{result}%</h1>
         )
     }
 
+    let copyResults = () => {
+        alert("Copied!")
+    }
+
     return (
-        <div>
+        <div id="resultDiv">
             <p>Congratulations!</p>
             <CountScorePercentage />
             <img src={wineGlass} alt="congratulations!" />
             <div>
-                <button></button>
+                <button>Start Again</button>
+                <button onClick={copyResults}>Copy results</button>
             </div>
-            </div>
-            )
+        </div>
+    )
 };
 
-            export default Result;
+export default Result;

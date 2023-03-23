@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 //Components
 import LoadingScreen from './Loading_screen';
 import Result from './Result';
+import WelcomeScreen from './Welcome_screen';
 
 //Objects
 import questions from './Questions';
@@ -36,7 +37,7 @@ const FormTemplate = () => {
       for (let itemAnswer of item.answers) {
         if (answer === itemAnswer.answer) {
           if (itemAnswer.correct === true) {
-            setScore(score + 1)
+            setScore(score + 1);
           }
         }
       }
@@ -44,16 +45,16 @@ const FormTemplate = () => {
   }
 
   const getAnswerFromUser = event => {
-    setAnswer(event.target.value)
+    setAnswer(event.target.value);
   }
 
   const handleSubmit = event => {
-    checkAnswer()
-    event.preventDefault()
+    event.preventDefault();
   }
 
   const setNewQuestion = () => {
-    setIndex(index + 1)
+    checkAnswer();
+    setIndex(index + 1);
     if (index + 1 === questions.length) {
       setIsSubmitted(true);
     }
@@ -78,12 +79,12 @@ const FormTemplate = () => {
 
     return (
       <LoadingScreen />
-    )
+    );
 
   } else if (result === true) {
     return (
-      <Result  score={score} index={index}/>
-    )
+      <Result score={score} index={index} />
+    );
   }
   else {
 
@@ -109,7 +110,7 @@ const FormTemplate = () => {
         </form>
       </div>
     )
-  }
-}
+  };
+};
 
 export default FormTemplate;
