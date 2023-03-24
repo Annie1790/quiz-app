@@ -6,7 +6,7 @@ Simply open in browser, and go through the questions. For each right question, y
 
 ## Features
 - More questions
-- Welcome screen
+- Welcome screen :heavy_check_mark:
 - API to share results to clipboard
 - Mobile friendly version
 - Categories for the questions e.g. "Wine region questions", "Wine style questions"
