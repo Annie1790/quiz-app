@@ -1,0 +1,22 @@
+@use "index";
+
+#welcome_screen {
+    @include index.flex();
+    flex-direction: column;
+    gap: 30px;
+    height: 400px;
+
+    p {
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    button {
+        @include index.button();
+    }
+
+    input {
+        border: 1px solid index.$first_color;
+
+    }
+}

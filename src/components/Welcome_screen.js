@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-const WelcomeScreen = () => {
+import "../style/Welcome_screen.scss"
+
+const WelcomeScreen = ({onClose}) => {
     let [playerName, setPlayerName] = useState("");
 
     const setUserName = () => {
@@ -8,14 +10,14 @@ const WelcomeScreen = () => {
     };
 
     const getUserName = () => {
-        return playerName;
-    }
+        onClose(playerName);
+    };
 
     return (
-        <div>
+        <div id="welcome_screen">
             <p>Enter your name:</p>
-            <input id="user_name" type="text"></input>
-            <button onClick={setPlayerName}>Start</button>
+            <input onChange={setUserName} id="user_name" type="text"></input>
+            <button onClick={getUserName}>Start</button>
         </div>
     )
 };

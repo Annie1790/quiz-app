@@ -1,10 +1,10 @@
 import "../style/Header.scss"
 
-const Header = () => {
+const Header = ({playerName}) => {
     return (
         <div id="header">
             <p>Hello,</p>
-            <h1>User</h1>
+            <h1>{playerName}</h1>
         </div>
     )
 };

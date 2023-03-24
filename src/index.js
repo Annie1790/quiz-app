@@ -1,17 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import { useState } from 'react';
+
 import '../src/style/index.scss';
 import FormTemplate from './components/App';
 import Header from './components/Header';
+import WelcomeScreen from './components/Welcome_screen';
+
+let Component = () => {
+  const [playerName, setPlayerName] = useState("");
+
+  const getUserName = (value) => {
+    setPlayerName(value)
+  }
+
+return (
+  <>
+  <Header playerName={playerName}/>  
+  <WelcomeScreen onClose={getUserName}/>
+  
+  </>
+)
+}
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div id="main-flex">
-    <Header />
-    <FormTemplate />
+    <Component />
     </div>
     </React.StrictMode>
 );
