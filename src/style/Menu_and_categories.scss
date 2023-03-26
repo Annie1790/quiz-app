@@ -1,0 +1,41 @@
+@use "index";
+
+#menu-margin {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    div {
+        h1 {
+            color: index.$text_color;
+        }
+    }
+}
+
+#categories-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline !important;
+    flex-wrap: wrap;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.categories-flex {
+    display: flex;
+    border: 1px solid index.$first_color;
+    border-radius: 1rem;
+
+    p {
+        font-size: 24px;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        color: index.$text_color;
+        margin-left: 1rem;
+        font-stretch: 100%;
+    }
+}
+
+#categories-wrapper :hover {
+    background-color: index.$polka_color;
+}

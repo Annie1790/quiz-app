@@ -7,6 +7,7 @@ import '../src/style/index.scss';
 import FormTemplate from './components/App';
 import Header from './components/Header';
 import WelcomeScreen from './components/Welcome_screen';
+import Menu_and_categories from './components/Menu_and_categories';
 
 let Component = () => {
   const [playerName, setPlayerName] = useState("");
@@ -29,7 +30,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div id="main-flex">
-    <Component />
+      <Header />
+    <Menu_and_categories />
     </div>
     </React.StrictMode>
 );

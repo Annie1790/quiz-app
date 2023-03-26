@@ -1,42 +1,120 @@
+//categories 
+
 const questions = [
     {
-        question: "Grape",
+        question: "Which of these Bordeaux estates is NOT a 'First Growth'?",
         answers: [
             {
-                answer: "Merlot",
+                answer: "Montrose",
                 correct: true,
             },
             {
-                answer: "Furmint",
+                answer: "Lafite Rotschild",
                 correct: false,
             },
             {
-                answer: "Chardonnay",
+                answer: "Haut Brion",
                 correct: false,
             },
             {
-                answer: "Gamay",
+                answer: "Latour",
                 correct: false,
             }
         ]
     },
     {
-        question: "Wine",
+        question: "Which Chateau has a second wine known as 'Le Petit Lion'?",
         answers: [
             {
-                answer: "bottle",
+                answer: "Leoville-Poyferre",
+                correct: false,
+            },
+            {
+                answer: "Domaine De Chevalier",
+                correct: false,
+            },
+            {
+                answer: "Leoville-Las-Cases",
                 correct: true,
             },
             {
-                answer: "screwcap",
+                answer: "Chateau Cheval Blanc",
+                correct: false,
+            }
+        ]
+    },
+    {
+        question: "Which were the two estates that were upgraded to Premier Grand Cru Classe A status in the St-Emilion classification in 2012?",
+        answers: [
+            {
+                answer: "Pavie and Angelus",
+                correct: true,
+            },
+            {
+                answer: "Angelus and Ausone",
                 correct: false,
             },
             {
-                answer: "red",
+                answer: "Pavie and Cheval Blanc",
                 correct: false,
             },
             {
-                answer: "white",
+                answer: "Angelus and Canon",
+                correct: false,
+            }
+        ]
+    },
+    {
+        question: "Where is the wine region of Trentino?",
+        answers: [
+            {
+                answer: "Italy",
+                correct: true,
+            },
+            {
+                answer: "Argentina",
+                correct: false,
+            },
+            {
+                answer: "France",
+                correct: false,
+            },
+            {
+                answer: "Hungary",
+                correct: false,
+            }
+        ]
+    },
+    {
+        question: "True or false? in Saint-Joseph, Syrah must be used excusively for wine production.",
+        answers: [
+            {
+                answer: "False",
+                correct: true,
+            },
+            {
+                answer: "True",
+                correct: false,
+            }
+        ]
+    },
+    {
+        question: "Where is the wine region of Trentino?",
+        answers: [
+            {
+                answer: "Italy",
+                correct: true,
+            },
+            {
+                answer: "Argentina",
+                correct: false,
+            },
+            {
+                answer: "France",
+                correct: false,
+            },
+            {
+                answer: "Hungary",
                 correct: false,
             }
         ]
