@@ -63,6 +63,10 @@ body {
   @include mainGrid();
 }
 
+#main-flex::-webkit-scrollbar{
+  display: none;
+}
+
 #root {
   grid-row: 2;
   grid-column: 2;
@@ -70,8 +74,11 @@ body {
 
   #main-flex {
     min-height: 600px;
+    max-height: 610px;
     min-width: 400px;
     max-width: 600px;
+    overflow-y: scroll;
+
     background-color: $bg_color;
     border-radius: $radius;
     -webkit-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.72);

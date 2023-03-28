@@ -11,29 +11,55 @@ import Menu_and_categories from './components/Menu_and_categories';
 
 let Component = () => {
   const [playerName, setPlayerName] = useState("");
+  const [category, setCategory] = useState("");
 
   const getUserName = (value) => {
     setPlayerName(value)
-  }
+  };
 
-return (
-  <>
-  <Header playerName={playerName}/>  
-  <WelcomeScreen onClose={getUserName}/>
+  const onCategorySelected = (data) => {
+    
+    setCategory(data);
+    console.log(data);
+    
+  };
+  if (playerName !== "" && category === "france") {
+    return (
+      <>
+      <Header playerName={playerName} />
+      <FormTemplate />
+      </>
+    )
+  } 
+  else if (playerName !== "") {
+    return (<>
+      <Header playerName={playerName} />
+      <Menu_and_categories clickOnGame={onCategorySelected} />
+      </>
+    )
+  } 
+  else {
+    return (
+      <>
+        <Header playerName={playerName} />
+        <WelcomeScreen onClose={getUserName} />
   
-  </>
-)
+      </>
+    )
+  }
+  
 }
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div id="main-flex">
-      <Header />
-    <Menu_and_categories />
+      <Component />
     </div>
-    </React.StrictMode>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

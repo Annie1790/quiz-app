@@ -1,7 +1,7 @@
 //categories 
 
 const questions = [
-    {
+    {   type: "france",
         question: "Which of these Bordeaux estates is NOT a 'First Growth'?",
         answers: [
             {
@@ -22,7 +22,7 @@ const questions = [
             }
         ]
     },
-    {
+    {   type: "france",
         question: "Which Chateau has a second wine known as 'Le Petit Lion'?",
         answers: [
             {
@@ -43,7 +43,7 @@ const questions = [
             }
         ]
     },
-    {
+    {   type: "france",
         question: "Which were the two estates that were upgraded to Premier Grand Cru Classe A status in the St-Emilion classification in 2012?",
         answers: [
             {
@@ -64,7 +64,7 @@ const questions = [
             }
         ]
     },
-    {
+    {   type: "italy",
         question: "Where is the wine region of Trentino?",
         answers: [
             {
@@ -85,7 +85,7 @@ const questions = [
             }
         ]
     },
-    {
+    {   type: "france",
         question: "True or false? in Saint-Joseph, Syrah must be used excusively for wine production.",
         answers: [
             {
@@ -98,23 +98,212 @@ const questions = [
             }
         ]
     },
-    {
-        question: "Where is the wine region of Trentino?",
+    {   type: "france",
+        question: "The most common grape for Cognac and Armagnac is...",
         answers: [
             {
-                answer: "Italy",
+                answer: "Ugni Blanc",
                 correct: true,
             },
             {
-                answer: "Argentina",
+                answer: "Colombard",
                 correct: false,
             },
             {
-                answer: "France",
+                answer: "Folle Blanche",
                 correct: false,
             },
             {
-                answer: "Hungary",
+                answer: "Chenin Blanc",
+                correct: false,
+            }
+        ]
+    },
+    {   type: "france",
+        question: "Where is Fixin located?",
+        answers: [
+            {
+                answer: "Burgundy",
+                correct: true,
+            },
+            {
+                answer: "Bordeaux",
+                correct: false,
+            },
+            {
+                answer: "South West France",
+                correct: false,
+            },
+            {
+                answer: "Provance",
+                correct: false,
+            }
+        ]
+    },
+    {   type: "france",
+        question: "What Burgundy Classification does the following Appellation have: 'Romanée Conti (Cote de Nuits)'",
+        answers: [
+            {
+                answer: "Grand Cru",
+                correct: true,
+            },
+            {
+                answer: "Regional",
+                correct: false,
+            },
+            {
+                answer: "Village",
+                correct: false,
+            },
+            {
+                answer: "Village & Premier Cru",
+                correct: false,
+            }
+        ]
+    },
+    {   type: "france",
+        question: "Where in France is the following located: 'Chateau Pape-Clement'",
+        answers: [
+            {
+                answer: "Pessac-Leognan",
+                correct: true,
+            },
+            {
+                answer: "Saint-Estephe",
+                correct: false,
+            },
+            {
+                answer: "Saint Emilion",
+                correct: false,
+            },
+            {
+                answer: "Margaux",
+                correct: false,
+            }
+        ]
+    },
+    {   type: "portugal",
+        question: "Which is the correct sort on these Port Wine Regions from west to east?",
+        answers: [
+            {
+                answer: "Baixo Corgo, Cima Corgo, Douro Superior",
+                correct: true,
+            },
+            {
+                answer: "Cima Corgo, Baixo Corgo, Douro Superior",
+                correct: false,
+            },
+            {
+                answer: "Douro Superior, Baixo Corgo, Cima Corgo",
+                correct: false,
+            },
+            {
+                answer: "Baixo Corgo, Douro Superior, Cima Corgo",
+                correct: false,
+            }
+        ]
+    },
+    {   type: "france",
+        question: "All of the following French appellations are in Bordeaux region expect for one - which is the odd one out?",
+        answers: [
+            {
+                answer: "Volnay Santenots",
+                correct: true,
+            },
+            {
+                answer: "Graves",
+                correct: false,
+            },
+            {
+                answer: "Cremant de Bordeaux",
+                correct: false,
+            },
+            {
+                answer: "Pomerol",
+                correct: false,
+            }
+        ]
+    },
+    {   type: "italy",
+        question: "Which grape variety used for Gavi DOCG production?",
+        answers: [
+            {
+                answer: "Cortese",
+                correct: true,
+            },
+            {
+                answer: "Nebbiolo",
+                correct: false,
+            },
+            {
+                answer: "Trebbiano",
+                correct: false,
+            },
+            {
+                answer: "Nerello Mascalese",
+                correct: false,
+            }
+        ]
+    },
+    {   type: "italy",
+        question: "Which grape variety used for Chianti DOC production?",
+        answers: [
+            {
+                answer: "Sangiovese",
+                correct: true,
+            },
+            {
+                answer: "Barbera",
+                correct: false,
+            },
+            {
+                answer: "Malvasia",
+                correct: false,
+            },
+            {
+                answer: "Verdicchio",
+                correct: false,
+            }
+        ]
+    },
+    {   type: "usa",
+        question: "Which is the most widely planted black grape in California?",
+        answers: [
+            {
+                answer: "Cabernet Sauvignon",
+                correct: true,
+            },
+            {
+                answer: "Syrah",
+                correct: false,
+            },
+            {
+                answer: "Merlot",
+                correct: false,
+            },
+            {
+                answer: "Zinfandel",
+                correct: false,
+            }
+        ]
+    },
+    {   type: "usa",
+        question: "What is the most widely planted white grape in California?",
+        answers: [
+            {
+                answer: "Chardonnay",
+                correct: true,
+            },
+            {
+                answer: "Sauvignon Blanc",
+                correct: false,
+            },
+            {
+                answer: "Riesling",
+                correct: false,
+            },
+            {
+                answer: "Pinot Noir",
                 correct: false,
             }
         ]

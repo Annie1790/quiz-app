@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react';
 //Components
 import LoadingScreen from './Loading_screen';
 import Result from './Result';
-import WelcomeScreen from './Welcome_screen';
-
 //Objects
 import questions from './Questions';
 
@@ -30,6 +28,14 @@ const FormTemplate = () => {
   //       }
   //     })
   //   })
+  // }
+
+  // let getRightCategory = () => {
+  //   let newQuestions = [];
+  //   if (questions.type === data from menu and categories) {
+  //     newQuestions.push(data);
+  //   };
+  //   return newQuestions;
   // }
 
   let checkAnswer = () => {
@@ -87,7 +93,6 @@ const FormTemplate = () => {
     );
   }
   else {
-
 
     let inputFields = questions[index].answers.map((item) => {
       return (
