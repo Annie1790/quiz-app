@@ -10,6 +10,6 @@ Simply open in browser, and go through the questions. For each right question, y
 - API to share results to clipboard
 - Highlight correct answer
 - Mobile friendly version
-- Connect questions to each categories
+- Connect questions to each categories :heavy_check_mark:
 - Categories for the questions e.g. "Wine region questions", "Wine style questions" :heavy_check_mark:
 - Menu to choose between quizzes :heavy_check_mark:

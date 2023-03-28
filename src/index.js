@@ -23,11 +23,11 @@ let Component = () => {
     console.log(data);
     
   };
-  if (playerName !== "" && category === "france") {
+  if (playerName !== "" && category !== "") {
     return (
       <>
       <Header playerName={playerName} />
-      <FormTemplate />
+      <FormTemplate  group={category}/>
       </>
     )
   } 

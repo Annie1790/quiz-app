@@ -22,6 +22,27 @@ const questions = [
             }
         ]
     },
+    {   type: "hungary",
+    question: "How many wine regions Hungary has?",
+    answers: [
+        {
+            answer: "22",
+            correct: true,
+        },
+        {
+            answer: "15",
+            correct: false,
+        },
+        {
+            answer: "9",
+            correct: false,
+        },
+        {
+            answer: "27",
+            correct: false,
+        }
+    ]
+},
     {   type: "france",
         question: "Which Chateau has a second wine known as 'Le Petit Lion'?",
         answers: [
