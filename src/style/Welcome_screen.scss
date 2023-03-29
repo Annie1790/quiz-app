@@ -1,7 +1,7 @@
-@use "index";
+@use 'AnimatedRoutes';
 
 #welcome_screen {
-    @include index.flex();
+    @include AnimatedRoutes.flex();
     flex-direction: column;
     gap: 30px;
     height: 400px;
@@ -12,10 +12,10 @@
     };
 
     button {
-        @include index.button();
+        @include AnimatedRoutes.button();
     };
 
     input {
-        border: 1px solid index.$first_color;
+        border: 1px solid AnimatedRoutes.$first_color;
     };
 }

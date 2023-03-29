@@ -10,6 +10,9 @@ import questions from './Questions';
 //Style
 import '../style/App.scss';
 
+//Animation
+import { motion } from 'framer-motion';
+
 const FormTemplate = ({ group }) => {
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState("");
@@ -83,26 +86,46 @@ const FormTemplate = ({ group }) => {
   if (isSubmitted === true && result === false) {
 
     return (
-      <LoadingScreen />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <LoadingScreen />
+      </motion.div>
     );
 
   } else if (result === true) {
     return (
-      <Result score={score} index={index} />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <Result score={score} index={index} />
+      </motion.div>
     );
   }
   else {
 
     let inputFields = newQuestions[index].answers.map((item) => {
       return (
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
           <input name='answer' type="radio" value={item.answer}></input>
           <label>{item.answer}</label>
-        </div>
+        </motion.div>
       )
     });
     return (
-      <div id="form">
+      <motion.div id="form"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <form onSubmit={handleSubmit} onChange={getAnswerFromUser}>
           <div>
             <p>{index + 1}/{newQuestions.length}</p>
@@ -112,7 +135,7 @@ const FormTemplate = ({ group }) => {
           <button type='submit' onClick={setNewQuestion}>{index + 1 === newQuestions.length ? "Submit" : "Next"}</button>
 
         </form>
-      </div>
+      </motion.div>
     )
   };
 };

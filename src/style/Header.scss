@@ -1,10 +1,8 @@
-@use 'index';
-
+@use 'AnimatedRoutes';
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
-
 #header {
-    @include index.flex();
+    @include AnimatedRoutes.flex();
     align-items: baseline !important;
     gap: 1rem;
     

@@ -1,8 +1,8 @@
-@use 'index';
+@use 'AnimatedRoutes';
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 #resultDiv {
-    @include index.flex;
+    @include AnimatedRoutes.flex;
     flex-direction: column;
     gap: 30px;
     p {
@@ -22,16 +22,16 @@
     }
 
     div {
-        @include index.flex();
+        @include AnimatedRoutes.flex();
         gap: 30px;
         button {
-            @include index.button();
+            @include AnimatedRoutes.button();
             max-width: 120px !important;
          }
      
          button:hover,
          button:focus {
-             @include index.buttonHover();
+             @include AnimatedRoutes.buttonHover();
          }
     }
 }

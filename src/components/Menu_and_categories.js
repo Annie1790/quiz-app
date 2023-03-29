@@ -1,7 +1,9 @@
-import { click } from "@testing-library/user-event/dist/click";
+//SCSS
 import "../style/Menu_and_categories.scss"
+//Animation
+import { motion } from 'framer-motion';
 
-const Menu_and_categories = ({clickOnGame}) => {
+const Menu_and_categories = ({ clickOnGame }) => {
 
     const france = () => {
         clickOnGame("france")
@@ -26,28 +28,32 @@ const Menu_and_categories = ({clickOnGame}) => {
 
 
     return (
-        <div id="menu-margin">
+        <motion.div id="menu-margin"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <div>
                 <h1>Fancy for a quiz?</h1>
             </div>
             <div id="categories-wrapper">
                 <button className="categories-flex" onClick={france}>
-                   <p>🇫🇷 France</p> 
+                    <p>🇫🇷 France</p>
                 </button>
                 <button className="categories-flex" onClick={hungary}>
-                   <p>🇭🇺 Hungary</p> 
+                    <p>🇭🇺 Hungary</p>
                 </button>
-                <button className="categories-flex"onClick={italy}>
-                   <p>🇮🇹 Italy</p> 
+                <button className="categories-flex" onClick={italy}>
+                    <p>🇮🇹 Italy</p>
                 </button>
-                <button className="categories-flex"onClick={usa}>
-                   <p>🇺🇸 United States</p> 
+                <button className="categories-flex" onClick={usa}>
+                    <p>🇺🇸 United States</p>
                 </button>
-                <button className="categories-flex"onClick={portugal}>
-                   <p>🇵🇹 Portugal</p> 
+                <button className="categories-flex" onClick={portugal}>
+                    <p>🇵🇹 Portugal</p>
                 </button>
             </div>
-        </div>
+        </motion.div>
     )
 };
 

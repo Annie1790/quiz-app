@@ -1,6 +1,9 @@
+//Assets
 import wineGlass from "../assets/glass.svg";
-
-import "../style/Result.scss"
+//SCSS
+import "../style/Result.scss";
+//Animation
+import { motion } from 'framer-motion';
 
 const Result = ({ score, index }) => {
 
@@ -19,7 +22,11 @@ const Result = ({ score, index }) => {
     }
 
     return (
-        <div id="resultDiv">
+        <motion.div id="resultDiv"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            >
             <p>Congratulations!</p>
             <CountScorePercentage />
             <img src={wineGlass} alt="congratulations!" />
@@ -27,7 +34,7 @@ const Result = ({ score, index }) => {
                 <button>Start Again</button>
                 <button onClick={copyResults}>Copy results</button>
             </div>
-        </div>
+        </motion.div>
     )
 };
 

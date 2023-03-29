@@ -1,3 +1,4 @@
+//SCSS
 import "../style/Header.scss"
 
 const Header = ({playerName}) => {

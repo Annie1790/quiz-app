@@ -1,7 +1,7 @@
-@use 'index';
+@use 'AnimatedRoutes';
 
-// @include index.flex();
-//         border-radius: index.$radius;
+// @include AnimatedRoutes.flex();
+//         border-radius: AnimatedRoutes.$radius;
 //         width: 60px;
 //         height: 30px;
 //         font-family: 'Courier New', Courier, monospace;
@@ -26,19 +26,19 @@
     }
 
     button {
-       @include index.button();
+       @include AnimatedRoutes.button();
     }
 
     button:hover,
     button:focus {
-        @include index.buttonHover();
+        @include AnimatedRoutes.buttonHover();
     }
 }
 
 ;
 
 #loading {
-    @include index.flex();
+    @include AnimatedRoutes.flex();
     height: 300px;
 
     .loading-spinner {
@@ -52,7 +52,7 @@
         height: 50px;
 
         & .path {
-            stroke: index.$first_color;
+            stroke: AnimatedRoutes.$first_color;
             stroke-linecap: round;
             animation: dash 1.5s ease-in-out infinite;
         }
