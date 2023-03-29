@@ -79,7 +79,15 @@ const FormTemplate = ({ group }) => {
 
   }, [isSubmitted]);
 
+  const uncheckRadioButton = () => {
+    let radioButtons = document.querySelectorAll(".inputButtons");
 
+    if (setNewQuestion) {
+      radioButtons.forEach((item) => {
+        item.checked = false;
+      })
+    }
+  }
 
 
   //main return
@@ -115,7 +123,7 @@ const FormTemplate = ({ group }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <input name='answer' type="radio" value={item.answer}></input>
+          <input name='answer' type="radio" value={item.answer} className="inputButtons"></input>
           <label>{item.answer}</label>
         </motion.div>
       )
@@ -132,7 +140,7 @@ const FormTemplate = ({ group }) => {
             <h1>{newQuestions[index].question}</h1>
           </div>
           {inputFields}
-          <button type='submit' onClick={setNewQuestion}>{index + 1 === newQuestions.length ? "Submit" : "Next"}</button>
+          <button type='submit' onClick={() => {setNewQuestion(); uncheckRadioButton()}}>{index + 1 === newQuestions.length ? "Submit" : "Next"}</button>
 
         </form>
       </motion.div>
