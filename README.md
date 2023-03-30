@@ -7,7 +7,7 @@ Simply open in browser, and go through the questions. For each right question, y
 ## Features I work on:
 - More questions :heavy_check_mark:
 - Welcome screen :heavy_check_mark:
-- API to share results to clipboard
+- API to share results to clipboard :heavy_check_mark:
 - Highlight correct answer
 - Mobile friendly version
 - Connect questions to each categories :heavy_check_mark:
