@@ -16,7 +16,7 @@ const Result = ({ score, index }) => {
         return (
             <h1>{result}%</h1>
         )
-    }
+    };
 
     let CongratzString = () => {
         function between(x, min, max) {
@@ -37,13 +37,17 @@ const Result = ({ score, index }) => {
           }
           else if (between(result, 81, 100)) {
             finalString = "Amazing! Congratulations!"
-          }
+          };
 
         return (
             <p>
                 {finalString}
             </p>
         )
+    };
+
+    const backToMainMenu = () => {
+      window.location.reload();
     };
 
     return (
@@ -56,7 +60,7 @@ const Result = ({ score, index }) => {
             <CountScorePercentage />
             <img src={wineGlass} alt="congratulations!" />
             <div>
-                <button>Start Again</button>
+                <button onClick={backToMainMenu}>Start Again</button>
                 <button onClick={() => {navigator.clipboard.writeText(`My score in wine quiz is ${result}%`); alert("Result copied!")}}>Copy results</button>
             </div>
         </motion.div>

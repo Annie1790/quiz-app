@@ -87,7 +87,9 @@ const FormTemplate = ({ group }) => {
         item.checked = false;
       })
     }
-  }
+  };
+
+
 
 
   //main return
