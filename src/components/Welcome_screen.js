@@ -1,5 +1,5 @@
 //React Hooks
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //Animation
 import { motion } from 'framer-motion';
 

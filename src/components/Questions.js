@@ -709,6 +709,324 @@ const questions = [
             }
         ]
     },
+    {
+        type: "portugal",
+        question: "Port, one of Portugal's most famed exports, is made in which area?",
+        answers: [
+            {
+                answer: "Douro",
+                correct: true,
+            },
+            {
+                answer: "Duero",
+                correct: false,
+            },
+            {
+                answer: "Baga",
+                correct: false,
+            },
+            {
+                answer: "Alentejo",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "portugal",
+        question: "Sercial, Verdelho, Bual and Malvasia are all grape varieties used in production of __.",
+        answers: [
+            {
+                answer: "Madeira",
+                correct: true,
+            },
+            {
+                answer: "Port",
+                correct: false,
+            },
+            {
+                answer: "Sherry",
+                correct: false,
+            },
+            {
+                answer: "Moscatel de Setubal",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "portugal",
+        question: "What is the difference between ruby and tawny port?",
+        answers: [
+            {
+                answer: "Ruby is younger, sweeter and fruitier, tawny aged in longer in wooden barrels",
+                correct: true,
+            },
+            {
+                answer: "Different grape varieties",
+                correct: false,
+            },
+            {
+                answer: "Tawny is younger, sweeter and fruitier, Ruby aged in longer in wooden barrels",
+                correct: false,
+            },
+            {
+                answer: "Nothing",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "portugal",
+        question: "Where port production is based?",
+        answers: [
+            {
+                answer: "Douro",
+                correct: true,
+            },
+            {
+                answer: "Duero",
+                correct: false,
+            },
+            {
+                answer: "Baga",
+                correct: false,
+            },
+            {
+                answer: "Alentejo",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "portugal",
+        question: "The climate in portugal is __.",
+        answers: [
+            {
+                answer: "Maritime",
+                correct: true,
+            },
+            {
+                answer: "Continental",
+                correct: false,
+            },
+            {
+                answer: "Tropical",
+                correct: false,
+            },
+        ]
+    },
+    {
+        type: "portugal",
+        question: "Where is vino verde located?",
+        answers: [
+            {
+                answer: "Northeast Portugal",
+                correct: true,
+            },
+            {
+                answer: "East Portugal",
+                correct: false,
+            },
+            {
+                answer: "South Portugal",
+                correct: false,
+            },
+            {
+                answer: "Central Portugal",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "portugal",
+        question: "Which are vinho verde's grape varieties?",
+        answers: [
+            {
+                answer: "All of the above",
+                correct: true,
+            },
+            {
+                answer: "Arinto",
+                correct: false,
+            },
+            {
+                answer: "Loureiro",
+                correct: false,
+            },
+            {
+                answer: "Alvarinho",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "portugal",
+        question: "Colheita port is a __.",
+        answers: [
+            {
+                answer: "single-vintage tawny port",
+                correct: true,
+            },
+            {
+                answer: "single-vintage ruby port",
+                correct: false,
+            },
+        ]
+    },
+    {
+        type: "portugal",
+        question: "True or false? Rose port is a very decent variation of the market.",
+        answers: [
+            {
+                answer: "True",
+                correct: true,
+            },
+            {
+                answer: "False",
+                correct: false,
+            },
+
+        ]
+    },
+    {
+        type: "hungary",
+        question: "Badacsony is famous for its unique __ soil type.",
+        answers: [
+            {
+                answer: "volcanic",
+                correct: true,
+            },
+            {
+                answer: "clay",
+                correct: false,
+            },
+            {
+                answer: "slate",
+                correct: false,
+            },
+            {
+                answer: "terra rossa",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "hungary",
+        question: "Which is the largest wine region in Hungary?",
+        answers: [
+            {
+                answer: "Kunsag",
+                correct: true,
+            },
+            {
+                answer: "Hajos-Baja",
+                correct: false,
+            },
+            {
+                answer: "Tokaj",
+                correct: false,
+            },
+            {
+                answer: "Szekszard",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "hungary",
+        question: "Which of these regions can produce Bull's Blood?",
+        answers: [
+            {
+                answer: "Szekszard",
+                correct: true,
+            },
+            {
+                answer: "Sopron",
+                correct: false,
+            },
+            {
+                answer: "Etyek",
+                correct: false,
+            },
+            {
+                answer: "Zala",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "hungary",
+        question: "True or false? Olaszrizling(Welschriesling) is related to the Rhine Riesling.",
+        answers: [
+            {
+                answer: "False",
+                correct: true,
+            },
+            {
+                answer: "True",
+                correct: false,
+            },
+        ]
+    },
+    {
+        type: "hungary",
+        question: "__ grape varieties are officially approved for Tokaji wine production.",
+        answers: [
+            {
+                answer: "6",
+                correct: true,
+            },
+            {
+                answer: "3",
+                correct: false,
+            },
+            {
+                answer: "5",
+                correct: false,
+            },
+            {
+                answer: "1",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "hungary",
+        question: "Szamorodni can be made in __ styles.",
+        answers: [
+            {
+                answer: "Dry and sweet",
+                correct: true,
+            },
+            {
+                answer: "Dry",
+                correct: false,
+            },
+            {
+                answer: "Fortified",
+                correct: false,
+            },
+            {
+                answer: "Dry and fortified",
+                correct: false,
+            }
+        ]
+    },
+    {
+        type: "hungary",
+        question: "What is the cask name used in aszu production?",
+        answers: [
+            {
+                answer: "Gönc",
+                correct: true,
+            },
+            {
+                answer: "Barrique",
+                correct: false,
+            },  
+        ]
+    },
+    
 ];
 
 let shuffle = array => {

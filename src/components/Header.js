@@ -1,5 +1,5 @@
 //SCSS
-import "../style/Header.scss"
+import "../style/Header.scss";
 
 const Header = ({playerName}) => {
     return (
