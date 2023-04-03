@@ -1,11 +1,21 @@
 {
   "short_name": "Wine Quiz",
-  "name": "Wine Quiz",
+  "name": "Wine",
   "icons": [
     {
       "src": "wine-bottle.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "wine-bottle.ico",
+      "type": "image/x-icon",
+      "sizes": "192x192"
+    },
+    {
+      "src": "wine-bottle.ico",
+      "type": "image/x-icon",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
